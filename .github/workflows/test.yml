@@ -1,0 +1,38 @@
+name: Test formula
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-15
+          - runner: macos-15-intel
+          - runner: ubuntu-24.04-arm
+          - runner: ubuntu-24.04
+    runs-on: ${{ matrix.runner }}
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: "1"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Add Linux Homebrew to PATH
+        if: runner.os == 'Linux'
+        run: echo "/home/linuxbrew/.linuxbrew/bin" >> "$GITHUB_PATH"
+      - name: Tap FiscalRail and use checked-out formula
+        run: |
+          brew tap fiscalrail/tap
+          cp "$GITHUB_WORKSPACE/Formula/fiscalrail.rb" "$(brew --repository fiscalrail/tap)/Formula/fiscalrail.rb"
+      - run: brew audit --strict fiscalrail/tap/fiscalrail
+      - run: brew install fiscalrail/tap/fiscalrail
+      - run: brew test fiscalrail/tap/fiscalrail
