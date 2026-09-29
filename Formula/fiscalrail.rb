@@ -5,25 +5,25 @@ class Fiscalrail < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/fiscalrail/fiscalrail-cli/releases/download/v0.5.0/fiscalrail-v0.5.0-aarch64-apple-darwin.tar.gz"
-      sha256 "7ea4e4e65195dfaaf1cae400255c7a31f219eaa2ea4dc4098598da826d4ebc7f"
+      url "https://github.com/fiscalrail/fiscalrail-cli/releases/download/v0.5.1/fiscalrail-v0.5.1-aarch64-apple-darwin.tar.gz"
+      sha256 "99838b1a1418bf8a7161ef635153f28c84b00df42be05abf990d6a5ec72a0d85"
     end
 
     on_intel do
-      url "https://github.com/fiscalrail/fiscalrail-cli/releases/download/v0.5.0/fiscalrail-v0.5.0-x86_64-apple-darwin.tar.gz"
-      sha256 "7eaa8f81e91a01925e65b51cfb903697a6bc70ec104251665efd880dbe4e2fd0"
+      url "https://github.com/fiscalrail/fiscalrail-cli/releases/download/v0.5.1/fiscalrail-v0.5.1-x86_64-apple-darwin.tar.gz"
+      sha256 "55586f58005b1e823439b0a2216d794d8c640a44d7e0b9312aaa01653b8624b2"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/fiscalrail/fiscalrail-cli/releases/download/v0.5.0/fiscalrail-v0.5.0-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "4896ad9b1844897d5f6325eb6d4b541500bc12b089b87921e9204ffab30a0e08"
+      url "https://github.com/fiscalrail/fiscalrail-cli/releases/download/v0.5.1/fiscalrail-v0.5.1-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "7eaf2bba6a9f5fb2647daa789bbf3d2c20b8fce5d3fad2cf56fe428be565710f"
     end
 
     on_intel do
-      url "https://github.com/fiscalrail/fiscalrail-cli/releases/download/v0.5.0/fiscalrail-v0.5.0-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "03a35a3fb8799b9a57b7c0b9f4a7ace2fc05fafcac3518e98af48239789bf75c"
+      url "https://github.com/fiscalrail/fiscalrail-cli/releases/download/v0.5.1/fiscalrail-v0.5.1-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "9573741f9df497095100504bf11c8b4b611c5fa26eb63d9bbe83b71d2088904f"
     end
   end
 

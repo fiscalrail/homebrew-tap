@@ -16,6 +16,6 @@ brew upgrade fiscalrail/tap/fiscalrail
 ```
 
 The CLI's [README](https://github.com/fiscalrail/fiscalrail-cli#readme) covers
-credentials and commands. This tap currently tracks CLI version 0.5.0. Update
+credentials and commands. This tap currently tracks CLI version 0.5.1. Update
 `Formula/fiscalrail.rb` with the new release URLs and SHA-256 hashes when a new
 version ships, then run the tap's install checks before merging.
